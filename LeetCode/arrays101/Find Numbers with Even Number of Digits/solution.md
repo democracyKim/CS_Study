@@ -4,7 +4,7 @@ Given an array nums of integers, return how many of them contain an even number 
 
 # Intuition
 - Try to find the method of getting nums of digits.
-- When you get digits, you should judge whether or not it is odd.
+- When you get digits, you should judge whether or not it is even.
 
 # Functions
 - int HowManyDigits(int num)
