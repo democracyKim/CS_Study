@@ -7,10 +7,10 @@ Given an array nums of integers, return how many of them contain an even number 
 - When you get digits, you should judge whether or not it is even.
 
 # Functions
-- int HowManyDigits(int num)
+### int HowManyDigits(int num)
 if (num / 10) > 1, you can add 1 to the digit
 
-- int IsItEven (int num)
+### int IsItEven (int num)
 Even numbers are numbers that are divisible by 2
 
 # Complexity
