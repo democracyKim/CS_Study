@@ -14,9 +14,9 @@ Given an array nums of integers, return how many of them contain an even number 
 - Even numbers are numbers that are divisible by 2
 
 # Complexity
-- Time complexity:
+- Time complexity: O(n)
 
-- Space complexity:
+- Space complexity: O(1)
 
 # Code
 ```c
