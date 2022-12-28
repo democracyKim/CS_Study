@@ -8,10 +8,10 @@ Given an array nums of integers, return how many of them contain an even number 
 
 # Functions
 ### int HowManyDigits(int num)
-if (num / 10) > 1, you can add 1 to the digit
+- if (num / 10) > 1, you can add 1 to the digit
 
 ### int IsItEven (int num)
-Even numbers are numbers that are divisible by 2
+- Even numbers are numbers that are divisible by 2
 
 # Complexity
 - Time complexity:
