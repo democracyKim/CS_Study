@@ -1,7 +1,7 @@
 # [Max Consecutive Ones][maxlink]
 [maxlink]: https://leetcode.com/explore/featured/card/fun-with-arrays/521/introduction/3238/ "link"
 # Intuition
-To find the max one, compare the new possible max and an old max.
+To find the max one, compare the count and the max.
 
 # Approach
 This problem gives you the number array and numsSize. 
