@@ -34,7 +34,6 @@ Given an integer array nums sorted in non-decreasing order, return an array of t
 
 # Code
 ```c
-//#include <stdio.h>
 #include <stdlib.h>
 
 int bigger_square(int a, int b, int *left, int *right)
