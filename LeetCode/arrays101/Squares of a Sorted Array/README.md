@@ -13,7 +13,7 @@ Given an integer array nums sorted in non-decreasing order, return an array of t
 
 ### soulution 2: one-pass
 - Because the input nums are in non-decreasing order, you can assume that the abs of the negative number are in non-increasing order. On the other hand, the abs of the positive number are in non-decreasing order. In other words, the largest abs of the negative number is on the left side, and that of the positive number is on the right side. We put the larger one in the res reversely.
-    - ex)-9 -8 -6 -4 -3 -1 0 1 2 3 5 7 8 9
+    - ex)-9 -8 -6 -4 -3 -1 0 1 2 3 5 7 8 9  
     abs : large <-------> small <------>large 
 - The square number is proportional to the abs number. So instead of comparing abs numbers, you can try to find the larger square number. 
 
