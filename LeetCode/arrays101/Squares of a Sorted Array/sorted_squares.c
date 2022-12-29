@@ -1,24 +1,15 @@
 //#include <stdio.h>
 #include <stdlib.h>
 
-int square(int num)
+int bigger_square(int a, int b, int *left, int *right)
 {
-	return (num * num);
-}
-
-int bigger_abs(int a, int b, int *left, int *right)
-{
-	if (a < 0)
-		a *= -1;
-	if (b < 0)
-		b *= -1;
-	if (a > b)
+	if (a * a > b * b)
 	{
 		(*left)++;
-		return (a);
+		return (a * a);
 	}
 	(*right)--;
-	return (b);
+	return (b * b);
 }
 
 int* sortedSquares(int* nums, int numsSize, int* returnSize)
@@ -35,8 +26,7 @@ int* sortedSquares(int* nums, int numsSize, int* returnSize)
 	res = (int *)malloc(sizeof(int) * (numsSize));
 	while (left <= right)
 	{
-		res[i] = square(bigger_abs(*(nums + left), *(nums + right), &left, &right));
-		//printf("res = %d\n", res[i]);
+		res[i] = bigger_square(*(nums + left), *(nums + right), &left, &right);
 		i--;
 	}
 	return (res);
