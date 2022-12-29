@@ -1,5 +1,6 @@
 # [Squares of a Sorted Array][link]
 [link]: https://leetcode.com/explore/featured/card/fun-with-arrays/521/introduction/3240/ "link"
+
 Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.  
 - non-decreasing order: the next value of each number is the same or bigger.
 	- ex) 1 2 3 3 5 8
@@ -12,9 +13,12 @@ Given an integer array nums sorted in non-decreasing order, return an array of t
 
 ### soulution 2: one-pass
 - Because the input nums are in non-decreasing order, you can assume that the abs of the negative number are in non-increasing order. On the other hand, the abs of the positive number are in non-decreasing order. In other words, the largest abs of the negative number is on the left side, and that of the positive number is on the right side. We put the larger one in the res reversely.
+    - ex)-9 -8 -6 -4 -3 -1 0 1 2 3 5 7 8 9
+    abs : large <-------> small <------>large 
+- The square number is proportional to the abs number. So instead of comparing abs numbers, you can try to find the larger square number. 
 
-- Make two variables, one is the left, and the other is the right.
-- Compare the abs of two values, and input the larger value to the returnSize by transforming the square.
+    - Make two variables, one is the left, and the other is the right.
+    - Compare the squares of two values, and input the larger value to the res.
 
 # Functions
 ### int square(int num)
@@ -33,24 +37,15 @@ Given an integer array nums sorted in non-decreasing order, return an array of t
 //#include <stdio.h>
 #include <stdlib.h>
 
-int square(int num)
+int bigger_square(int a, int b, int *left, int *right)
 {
-	return (num * num);
-}
-
-int bigger_abs(int a, int b, int *left, int *right)
-{
-	if (a < 0)
-		a *= -1;
-	if (b < 0)
-		b *= -1;
-	if (a > b)
+	if (a * a > b * b)
 	{
 		(*left)++;
-		return (a);
+		return (a * a);
 	}
 	(*right)--;
-	return (b);
+	return (b * b);
 }
 
 int* sortedSquares(int* nums, int numsSize, int* returnSize)
@@ -67,16 +62,8 @@ int* sortedSquares(int* nums, int numsSize, int* returnSize)
 	res = (int *)malloc(sizeof(int) * (numsSize));
 	while (left <= right)
 	{
-		res[i] = square(bigger_abs(*(nums + left), *(nums + right), &left, &right));
-		//printf("res = %d\n", res[i]);
+		res[i] = bigger_square(*(nums + left), *(nums + right), &left, &right);
 		i--;
 	}
 	return (res);
 }
-
-// int main(){
-// 	int nums[] = {-4, -1, 0, 3, 10};
-// 	int size = 5;
-// 	int *res = sortedSquares(nums, 5, &size);
-// }
-```
