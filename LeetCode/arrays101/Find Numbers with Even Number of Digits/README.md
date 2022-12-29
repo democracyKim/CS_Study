@@ -1,5 +1,5 @@
 # [Find Numbers with Even Number of Digits][link]
-[link]: https://leetcode.com/explore/featured/card/fun-with-arrays/521/introduction/3237/ "link"
+[link]: https://github.com/democracyKim/CS_Study/tree/main/LeetCode/arrays101/Find%20Numbers%20with%20Even%20Number%20of%20Digits "link"
 Given an array nums of integers, return how many of them contain an even number of digits.
 
 # Intuition
