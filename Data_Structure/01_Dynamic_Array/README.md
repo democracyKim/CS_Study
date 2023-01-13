@@ -76,8 +76,8 @@ array	*create_list(size_t max_num)
 		return (NULL);
 	list->max_count = max_num;
 	list->current_count = 0;
-	list->next_node = calloc(sizeof(node), max_num);
-	if (!list->next_node)
+	list->array = calloc(sizeof(node), max_num);
+	if (!list->array)
 	{
 		free(list);
 		list = NULL;
@@ -94,7 +94,7 @@ node	*get_node(array *list, size_t index)
 {
 	if (!list || index < 0 || list->current_count < index)
 		return (NULL);
-	return (list->next_node + index);
+	return (list->array + index);
 }
 ```
 
@@ -123,11 +123,11 @@ int	insert_node(array *list, node new_node, size_t index)
 		return (0);
 	if (is_full(list))
 	{
-		dummy = list->next_node;
-		list->next_node = calloc(sizeof(node), list->max_count * 1.5);
-		if (!list->next_node)
+		dummy = list->array;
+		list->array = calloc(sizeof(node), list->max_count * 1.5);
+		if (!list->array)
 			return (0);
-		memcpy(list->next_node, dummy, sizeof(node) * list->max_count);
+		memcpy(list->array, dummy, sizeof(node) * list->max_count);
 		list->max_count *= 1.5;
 		free(dummy);
 		dummy = NULL;
@@ -190,9 +190,9 @@ void	destroy_list(array *list)
 {
 	if (!list)
 		return ;
-	if (list->next)
-		free(list->next);
-	list->next = NULL;
+	if (list->array)
+		free(list->array);
+	list->array = NULL;
 	free(list);
 	list = NULL;
 }

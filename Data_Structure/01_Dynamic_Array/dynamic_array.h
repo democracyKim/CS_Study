@@ -11,7 +11,7 @@ typedef struct node_type {
 typedef struct array_type {
 	size_t	max_count;
 	size_t	current_count;
-	node	*next;
+	node	*array;
 } array;
 
 array	*create_list(size_t max_num);
