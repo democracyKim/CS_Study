@@ -2,6 +2,48 @@
 Arrays are the most simple data structure. You can restore data by using arrays like a palette containing various colors. 
 
 Dynamic arrays are similar to Arrays, but you can enlarge the size of spaces. It is more comfortable than Arrays if you don't know the size. But the con is time complexity because you must copy each data to the newly allocated spaces when you make more spaces. 
+
+```code
+
+#include "dynamic_array.h"
+
+int main(void)
+{
+	array	*list;
+	node	new_node;
+
+	list = create_list(5);
+	for (int i = 0; i < 5; i++)
+	{
+		new_node.data = i;
+		insert_node(list, new_node, i);
+	}
+	printf("\nmax = %zu, ", list->max_count);
+	printf("current = %zu\n", list->current_count);
+	display_list(list);
+
+	new_node.data = 5;
+	insert_node(list, new_node, 0);
+	printf("\nmax = %zu, ", list->max_count);
+	printf("current = %zu\n", list->current_count);
+	display_list(list);
+
+	new_node.data = 8;
+	insert_node(list, new_node, 2);
+	printf("\nmax = %zu, ", list->max_count);
+	printf("current = %zu\n", list->current_count);
+	display_list(list);
+
+	new_node.data = 13;
+	insert_node(list, new_node, 2);
+	printf("\nmax = %zu, ", list->max_count);
+	printf("current = %zu\n", list->current_count);
+	display_list(list);
+
+	destroy_list(list);
+	return (0);
+}
+```
 ## header
 ```c
 typedef struct node_type {
@@ -17,6 +59,8 @@ typedef struct array_type {
 I thought that counting could naturally be regarded as a positive number, so I used the size_t type for counting variables. 
 
 ## list of functions
+: create, get, insert, remove, display, destroy
+
 ### create_list
 Make 'max_num' rooms for containing data, using structure type. Create a new list by using malloc and initialize each member variable. To initialize the member of the structure, you can use 'calloc' instead of directly accessing member variables.  
 
