@@ -1,7 +1,7 @@
 # [Squares of a Sorted Array][link]
 [link]: https://leetcode.com/explore/featured/card/fun-with-arrays/521/introduction/3240/ "link"
 
-Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.  
+Given an integer array of nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order. 
 - non-decreasing order: the next value of each number is the same or bigger.
 	- ex) 1 2 3 3 5 8
 
@@ -15,14 +15,14 @@ Given an integer array nums sorted in non-decreasing order, return an array of t
 - Because the input nums are in non-decreasing order, you can assume that the abs of the negative number are in non-increasing order. On the other hand, the abs of the positive number are in non-decreasing order. In other words, the largest abs of the negative number is on the left side, and that of the positive number is on the right side. We put the larger one in the res reversely.
     - ex)-9 -8 -6 -4 -3 -1 0 1 2 3 5 7 8 9  
     abs : large <-------> small <------>large 
-- The square number is proportional to the abs number. So instead of comparing abs numbers, you can try to find the larger square number. 
+- The square number is proportional to the abs number. Therefore, you can find the larger square number instead of comparing abs numbers. 
 
-    - Make two variables, one is the left, and the other is the right.
+    - Make two variables, one is left, and the other is right.
     - Compare the squares of two values, and input the larger value to the res.
 
 # Functions
 ### int square(int num)
-- return the square of input number.
+- return the square of the input number.
 
 ### int bigger_abs(int a, int b, int *start, int *end)
 - return the bigger abs and move the index of it.

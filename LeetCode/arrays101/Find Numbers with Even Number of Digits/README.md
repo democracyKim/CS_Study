@@ -1,6 +1,6 @@
 # [Find Numbers with Even Number of Digits][link]
 [link]: https://github.com/democracyKim/CS_Study/tree/main/LeetCode/arrays101/Find%20Numbers%20with%20Even%20Number%20of%20Digits "link"
-Given an array nums of integers, return how many of them contain an even number of digits.
+Given an array num of integers, return how many of them contain an even number of digits.  
 
 # Intuition
 - Try to find the method of getting nums of digits.

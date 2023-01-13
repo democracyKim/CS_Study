@@ -6,10 +6,10 @@ To find the max one, compare the count and the max.
 # Approach
 This problem gives you the number array and numsSize. 
 - While searching 0th index to (numsSize -1)th index
-  - if you find the 1, add 1 to the count, for counting consecutive 1.
-  - else you find the 0, compare the count vs the max
+ - if you find the 1, add 1 to the count for counting consecutive 1.
+ - else you find the 0, compare the count vs. the max
 - When you escape the loop, there are two variables - the count and the max
-    - Before returning the answer, you should compare the count with the max. 
+ - Before returning the answer, you should compare the count with the max.   
 
 # Complexity
 - Time complexity:
