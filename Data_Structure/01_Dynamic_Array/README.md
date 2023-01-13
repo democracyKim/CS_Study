@@ -3,8 +3,8 @@ Arrays are the most simple data structure. You can restore data by using arrays 
 
 Dynamic arrays are similar to Arrays, but you can enlarge the size of spaces. It is more comfortable than Arrays if you don't know the size. But the con is time complexity because you must copy each data to the newly allocated spaces when you make more spaces. 
 
+## main
 ```c
-
 #include "dynamic_array.h"
 
 int main(void)
