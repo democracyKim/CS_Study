@@ -1,7 +1,7 @@
 # What is Linked Lists?
 Whereas arrays are contiguously-allocated structures composed of single slobs of memory, linked lists are composed of distinct chunks of memory bound together by pointers which are assumed to give the address in memory where a particular chunk of data is located. 
 
-The comparison between linked lists and arrays, referenced from "The Algorithm Design Manuel, Steven S. Skiena." 
+The comparison between linked lists and arrays, referenced from "The Algorithm Design Manuel, Steven S. Skiena."  
 The relative advantages of linked lists over static arrays include the following:
 - Overflow on linked structures can never occur unless the memory is actually full.
 - Insertions and deletions are simpler than for contiguous array lists. 
