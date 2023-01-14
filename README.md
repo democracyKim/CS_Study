@@ -1,5 +1,18 @@
-# Arrays 101
+# CS Study: be a better programmer :D 
+**Go with me!** 
 
+## Fundamental Data structure & Algorithms for solving problems!
+- [Dynamic Arrays][dymanic_arrays]
+- [Linked List][linked_list]
+- Array Stack
+- Array Queue
+- Binary Tree
+
+[dymanic_arrays]:https://github.com/democracyKim/CS_Study/tree/main/Data_Structure/01_Dynamic_Arrays
+[linked_list]:https://github.com/democracyKim/CS_Study/tree/main/Data_Structure/02_Linked_List
+
+## LeetCode for broadening your thinking!
+### Arrays 101
 - [Max Consecutive Ones][maxlink]
 - [Find Numbers with Even Number of Digits][findlink]
 - [Squares of a Sorted Array][Sorted]

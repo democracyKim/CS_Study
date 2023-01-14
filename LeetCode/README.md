@@ -1,5 +1,5 @@
-# Arrays 101
-
+# Let's take an explore LeetCode with me :)
+### Arrays 101
 - [Max Consecutive Ones][maxlink]
 - [Find Numbers with Even Number of Digits][findlink]
 - [Squares of a Sorted Array][Sorted]
