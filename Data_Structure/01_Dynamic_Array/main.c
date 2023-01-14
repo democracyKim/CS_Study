@@ -34,7 +34,8 @@ int main(void)
 	printf("current = %zu\n", list->current_count);
 	display_list(list);
 
-	destroy_list(list);
-	printf("%p\n", list);
+	destroy_list(&list);
+	printf("list address: %p\n", list);
+	display_list(list);
 	return (0);
 }

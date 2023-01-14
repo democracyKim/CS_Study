@@ -81,6 +81,11 @@ void	display_list(array *list)
 	size_t	i;
 
 	i = 0;
+	if (!list)
+	{
+		printf("no list\n");
+		return ;
+	}
 	printf("list : ");
 	while (i < list->current_count)
 	{
@@ -90,15 +95,15 @@ void	display_list(array *list)
 	printf("\n");
 }
 
-void	destroy_list(array *list)
+void	destroy_list(array **list)
 {
-	if (!list)
+	if (!*list)
 		return ;
-	if (list->array != NULL)
+	if ((*list)->array != NULL)
 	{
-		free(list->array);
-		list->array = NULL;
+		free((*list)->array);
+		(*list)->array = NULL;
 	}
-	free(list);
-	list = NULL;
+	free(*list);
+	*list = NULL;
 }

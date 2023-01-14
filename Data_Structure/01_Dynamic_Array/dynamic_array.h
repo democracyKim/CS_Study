@@ -20,6 +20,6 @@ int		is_full(array *list);
 int		insert_node(array *list, node new_node, size_t index);
 int		remove_node(array *list, size_t index);
 void	display_list(array *list);
-void	destroy_list(array *list);
+void	destroy_list(array **list);
 
 #endif
