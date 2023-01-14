@@ -1,5 +1,5 @@
-#ifndef DYNAMICARRAY_H
-# define DYNAMICARRAY_H
+#ifndef DYNAMIC_ARRAY_H
+# define DYNAMIC_ARRAY_H
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
