@@ -1,5 +1,5 @@
-# Study with me, Data Structure! 
-
+# Fundamental Data structure & Algorithms for solving problems!
+## Data structure
 - [Dynamic Arrays][dymanic_arrays]
 - [Linked List][linked_list]
 - Array Stack

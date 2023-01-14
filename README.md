@@ -1,7 +1,6 @@
 # CS Study: be a better programmer :D 
-**Go with me!** 
 
-## Fundamental Data structure & Algorithms for solving problems!
+## Fundamental Data structure & Algorithms!
 - [Dynamic Arrays][dymanic_arrays]
 - [Linked List][linked_list]
 - Array Stack
