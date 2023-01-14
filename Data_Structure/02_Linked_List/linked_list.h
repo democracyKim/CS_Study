@@ -20,7 +20,6 @@ node	*get_node(list *linked_list, size_t index);
 int		insert_node(list *linked_list, size_t index, int data);
 int		add_node(list *linked_list, int data);
 int		remove_node(list *linked_list, size_t index);
-void	free_node(node *delete);
 void	display_list(list *linked_list);
 void	destroy_list(list **linked_list);
 
