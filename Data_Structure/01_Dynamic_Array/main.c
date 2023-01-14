@@ -35,5 +35,6 @@ int main(void)
 	display_list(list);
 
 	destroy_list(list);
+	printf("%p\n", list);
 	return (0);
 }

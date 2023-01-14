@@ -183,7 +183,7 @@ void	display_list(array *list)
 ```
 
 ### destroy_list
-Destroy the list and all nodes. If the list is not allocated, finish the function. 
+Destroy the list and all nodes. If the list is not allocated, finish the function.  
 ```c
 void	destroy_list(array *list)
 {
@@ -191,8 +191,8 @@ void	destroy_list(array *list)
 		return ;
 	if (list->array != NULL)
 	{
-		list->array = NULL;
 		free(list->array);
+		list->array = NULL;
 	}
 	free(list);
 	list = NULL;

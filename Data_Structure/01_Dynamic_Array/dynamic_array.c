@@ -96,8 +96,8 @@ void	destroy_list(array *list)
 		return ;
 	if (list->array != NULL)
 	{
-		list->array = NULL;
 		free(list->array);
+		list->array = NULL;
 	}
 	free(list);
 	list = NULL;
