@@ -4,12 +4,13 @@
 - [Dynamic Arrays][dymanic_arrays]
 - [Linked List][linked_list]
 - [Stack][stack]
-- Array Queue
+- [Circular Queue][queue]
 - Binary Tree
 
 [dymanic_arrays]:https://github.com/democracyKim/CS_Study/tree/main/Data_Structure/01_Dynamic_Arrays
 [linked_list]:https://github.com/democracyKim/CS_Study/tree/main/Data_Structure/02_Linked_List
 [stack]:https://github.com/democracyKim/CS_Study/tree/main/Data_Structure/03_Stack
+[queue]: https://github.com/democracyKim/CS_Study/tree/main/Data_Structure/04_Circular_Queue
 
 ## LeetCode for broadening your thinking!
 ### Arrays 101
