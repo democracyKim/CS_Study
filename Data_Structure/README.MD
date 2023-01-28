@@ -4,6 +4,7 @@
 - [Linked List][linked_list]
 - [Stack][stack]
 - [Circular Queue][queue]
+- Linked Queue
 - Binary Tree
 
 [dymanic_arrays]:https://github.com/democracyKim/CS_Study/tree/main/Data_Structure/01_Dynamic_Arrays

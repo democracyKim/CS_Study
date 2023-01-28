@@ -13,7 +13,7 @@ int main()
 	for (int i = 0; i < 5; i++)
 		enqueue(list, i);
 	display_queue(list);
-	enqueue(list, 10);
+	printf("enqueue data = %d\n", enqueue(list, 10));
 	display_queue(list);
 
 	for (int i = 0; i < 5; i++)
