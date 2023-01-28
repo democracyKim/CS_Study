@@ -8,7 +8,7 @@ typedef struct node_type {
 	int	data;
 } node;
 
-typedef struct stack_type {
+typedef struct queue_type {
 	size_t	size;
 	size_t	front;
 	size_t	rear;
