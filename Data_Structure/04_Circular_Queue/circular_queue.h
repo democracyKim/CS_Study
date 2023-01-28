@@ -1,5 +1,5 @@
-#ifndef STACK_H
-# define STACK_H
+#ifndef QUEUE_H
+# define QUEUE_H
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
