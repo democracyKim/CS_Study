@@ -46,6 +46,7 @@ int	dequeue(queue *list)
 	del_node = list->headnode;
 	list->headnode = list->headnode->next;
 	free(del_node);
+	del_node = NULL;
 	return (data);
 }
 
@@ -53,7 +54,7 @@ void	display_queue(queue *list)
 {
 	node	*dummy;
 
-	if (!list || !list->headnode)
+	if (list == NULL || list->headnode == NULL)
 	{
 		printf("no list\n");
 		return ;

@@ -56,6 +56,7 @@ int push(stack *list, int data)
 	if (list->current_count >= list->max_count)
 	{
 		printf("list is full\n");
+		printf("cannot push %d\n", data);
 		return (-1);
 	}
 	top = list->current_count;
@@ -121,16 +122,17 @@ void	display_stack(stack *list)
 	i = 0;
 	if (!list)
 	{
-		printf("no list\n");
+		printf("empty list\n");
 		return ;
 	}
-	printf("list : ");
+	printf("\n----------------\n");
+	printf(" --> list : ");
 	while (i < list->current_count)
 	{
 		printf("%d ", list->stack[i].data);
 		i++;
 	}
-	printf("\n");
+	printf("\n----------------\n");
 }
 ```
 

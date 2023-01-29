@@ -62,7 +62,7 @@ void	display_stack(stack *list)
 	i = 0;
 	if (!list)
 	{
-		printf("no list\n");
+		printf("empty list\n");
 		return ;
 	}
 	printf("\n----------------\n");
