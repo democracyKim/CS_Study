@@ -4,22 +4,22 @@
 # include <stdio.h>
 # include <string.h>
 
-typedef struct node {
+typedef struct stack_node {
 	int			data;
-	struct node	*next;
-	struct node	*prev;
-} node;
+	struct stack_node	*next;
+	struct stack_node	*prev;
+} stack_node;
 
 typedef struct list {
-	node	*top;
-	node	*headnode;
+	stack_node	*top;
+	stack_node	*headnode;
 } stack;
 
-stack	*create_stack();
-node	*create_new_node(int data);
-int		push(stack *list, int data);
-int		pop(stack *list);
-void	display_stack(stack *list);
-void	destroy_stack(stack **list);
+stack		*create_stack();
+stack_node	*create_new_node(int data);
+int			push(stack *list, int data);
+int			pop(stack *list);
+void		display_stack(stack *list);
+void		destroy_stack(stack **list);
 
 #endif

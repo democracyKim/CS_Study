@@ -36,15 +36,15 @@ int main()
 ## Header
 'headnode' ensures access to the first element of the stack, and 'top' helps to access the last element of the stack.
 ```c
-typedef struct node {
+typedef struct stack_node {
 	int			data;
-	struct node	*next;
-	struct node	*prev;
-} node;
+	struct stack_node	*next;
+	struct stack_node	*prev;
+} stack_node;
 
 typedef struct list {
-	node	*top;
-	node	*headnode;
+	stack_node	*top;
+	stack_node	*headnode;
 } stack;
 ```
 ## Functions
@@ -62,11 +62,11 @@ stack	*create_stack()
 ```
 ### create new node
 ```c
-node	*create_new_node(int data)
+stack_node	*create_new_node(int data)
 {
-	node	*new_node;
+	stack_node	*new_node;
 	
-	new_node = calloc(1, sizeof(node));
+	new_node = calloc(1, sizeof(stack_node));
 	if (!new_node)
 		return (NULL);
 	new_node->data = data;
@@ -77,7 +77,7 @@ node	*create_new_node(int data)
 ```c
 int push(stack *list, int data)
 {
-	node	*new_node;
+	stack_node	*new_node;
 	if (list == NULL)
 		return (-1);
 	new_node = create_new_node(data);
@@ -97,8 +97,8 @@ int push(stack *list, int data)
 ```c
 int	pop(stack *list)
 {
-	int		data;
-	node	*del_node;
+	int			data;
+	stack_node	*del_node;
 
 	if (list == NULL || list->top == NULL)
 		return (-1);
@@ -125,7 +125,7 @@ int	pop(stack *list)
 ```c
 void	display_stack(stack *list)
 {
-	node	*dummy;
+	stack_node	*dummy;
 
 	if (list == NULL || list->top == NULL)
 	{
@@ -148,8 +148,8 @@ void	display_stack(stack *list)
 ```c
 void	destroy_stack(stack **list)
 {
-	node *dummy;
-	node *remove;
+	stack_node *dummy;
+	stack_node *remove;
 
 	if (!*list)
 		return ;	

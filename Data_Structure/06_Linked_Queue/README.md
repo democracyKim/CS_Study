@@ -31,14 +31,14 @@ int main()
 ## Header
 'headnode' ensures access to the first element of the queue, and 'rearnode' helps to access the last element of the queue.
 ```c
-typedef struct node {
+typedef struct queue_node {
 	int			data;
-	struct node	*next;
-} node;
+	struct queue_node	*next;
+} queue_node;
 
 typedef struct list {
-	node	*headnode;
-	node	*rearnode;
+	queue_node	*headnode;
+	queue_node	*rearnode;
 } queue;
 ```
 ## Functions
@@ -56,11 +56,11 @@ queue	*create_queue()
 ```
 ### create new node
 ```c
-node	*create_new_node(int data)
+queue_node	*create_new_node(int data)
 {
-	node	*new_node;
+	queue_node	*new_node;
 	
-	new_node = calloc(1, sizeof(node));
+	new_node = calloc(1, sizeof(queue_node));
 	if (!new_node)
 		return (NULL);
 	new_node->data = data;
@@ -71,7 +71,7 @@ node	*create_new_node(int data)
 ```c
 int enqueue(queue *list, int data)
 {
-	node	*new_node;
+	queue_node	*new_node;
 	if (list == NULL)
 		return (-1);
 	new_node = create_new_node(data);
@@ -89,7 +89,7 @@ int enqueue(queue *list, int data)
 int	dequeue(queue *list)
 {
 	int		data;
-	node	*del_node;
+	queue_node	*del_node;
 
 	if (list == NULL || list->headnode == NULL)
 		return (-1);
@@ -106,7 +106,7 @@ int	dequeue(queue *list)
 ```c
 void	display_queue(queue *list)
 {
-	node	*dummy;
+	queue_node	*dummy;
 
 	if (list == NULL || list->headnode == NULL)
 	{
@@ -129,8 +129,8 @@ void	display_queue(queue *list)
 ```c
 void	destroy_queue(queue **list)
 {
-	node *dummy;
-	node *remove;
+	queue_node *dummy;
+	queue_node *remove;
 
 	if (!*list)
 		return ;	

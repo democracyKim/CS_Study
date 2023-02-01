@@ -4,18 +4,18 @@
 # include <stdio.h>
 # include <string.h>
 
-typedef struct node {
+typedef struct queue_node {
 	int			data;
-	struct node	*next;
-} node;
+	struct queue_node	*next;
+} queue_node;
 
 typedef struct list {
-	node	*headnode;
-	node	*rearnode;
+	queue_node	*headnode;
+	queue_node	*rearnode;
 } queue;
 
 queue	*create_queue();
-node	*create_new_node(int data);
+queue_node	*create_new_node(int data);
 int		enqueue(queue *list, int data);
 int		dequeue(queue *list);
 void	display_queue(queue *list);
